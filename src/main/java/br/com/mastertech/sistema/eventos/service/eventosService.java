@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.Optional;
 
 @Service
 public class eventosService {
@@ -19,6 +20,15 @@ public class eventosService {
         return repository.save(evento);
     }
 
+    public Iterable<eventosModel> listarEventos() {
+        Iterable<eventosModel> eventos = repository.findAll();
+        return eventos;
+    }
+
+    public eventosModel listarEvento(String nome){
+        Optional<eventosModel> evento = repository.findByNome(nome);
+        return evento.get();
+    }
 
 
 }
