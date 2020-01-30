@@ -51,6 +51,9 @@ public class eventosModel {
     @Column
     private boolean ativo;
 
+    @Column
+    private String imagem;
+
 
     public int getId() {
         return id;
@@ -162,5 +165,13 @@ public class eventosModel {
 
     public void setAtivo(boolean ativo) {
         this.ativo = ativo;
+    }
+
+    public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
     }
 }

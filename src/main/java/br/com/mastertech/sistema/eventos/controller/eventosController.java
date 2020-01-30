@@ -46,8 +46,12 @@ public class eventosController {
         eventosModel evento = service.listarEvento(nome);
         if (evento != null) {
             model.addAttribute("evento", evento);
+            return "listarEvento";
         }
-        return "listarEvento";
+        else{
+            model.addAttribute("msg", "O evento " + nome + " não foi encontrado!! procure novamente");
+            return "buscarPorNome";
+        }
     }
 
     @GetMapping("evento/{nome}")
@@ -55,8 +59,12 @@ public class eventosController {
         eventosModel evento = service.listarEvento(nome);
         if (evento != null) {
             model.addAttribute("evento", evento);
+            return "listarEvento";
         }
-        return "listarEvento";
+        else {
+            model.addAttribute("msg", "O evento " + nome + " não foi encontrado!! procure novamente");
+            return "buscarPorNome";
+        }
     }
 
 }

@@ -25,10 +25,12 @@ public class eventosService {
         return eventos;
     }
 
-    public eventosModel listarEvento(String nome){
+    public eventosModel listarEvento(String nome) {
         Optional<eventosModel> evento = repository.findByNome(nome);
-        return evento.get();
+        if (evento.isPresent()) {
+            return evento.get();
+        }
+        return null;
     }
-
 
 }

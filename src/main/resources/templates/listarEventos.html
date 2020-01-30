@@ -9,6 +9,16 @@
 
 <div th:each="evento : ${eventos}">
     <div>
+        <p><strong>Nome:</strong>
+            <a th:href="@{'/evento/' + ${evento.nome}}">
+                <span th:text="${evento.nome}"></span>
+            </a>
+        </p>
+
+        <br>
+        <img th:src="${evento.imagem}" width="50%">
+        <br>
+
         <p><strong>Nome:</strong> <span th:text="${evento.nome}"></span></p>
         <p><strong>Descrição:</strong> <span th:text="${evento.descricao}"></span></p>
         <p><strong>Genero:</strong> <span th:text="${evento.tipo}"></span></p>

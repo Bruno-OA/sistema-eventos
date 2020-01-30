@@ -1,60 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<h1>Bem-Vindo ao Cadastro de Eventos</h1>
-<p>Cadastre seu Evento Conosco</p>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+    <h1>Bem-Vindo ao Cadastro de Eventos</h1>
+    <p>Cadastre seu Evento Conosco</p>
 
-<a href="/eventos"><button>Exibir Eventos</button></a><br>
+    <a href="/eventos"><button>Exibir Eventos</button></a><br>
 
+    <a href="/buscar"><button>Buscar Evento</button></a>
 
+    <form action="cadastrar" method="POST">
 
-<form action="cadastrar" method="POST">
-    <label>Nome: </label>
-    <input type="text" name="nome"><br>
+        <label>Nome do evento: </label>
+        <input type="text" name="nome"> <br><br>
 
-    <label>Descrição: </label>
-    <textarea name="descricao" id="" cols="30" rows="10"></textarea><br>
+        <label>Descrição: </label>
+        <textarea name="descricao" id="" cols="30" rows="10"></textarea><br>
 
-    <label>Genero: </label>
-    <select name="tipo">
-        <option value="rave">Rave</option>
-        <option value="baile">Baile</option>
-        <option value="casamento">Casamento</option>
-        <option value="games">Games</option>
-    </select><br>
+        <label>Genero: </label>
+        <select name="tipo">
+            <option value="rave">Rave</option>
+            <option value="baile">Baile</option>
+            <option value="casamento">Casamento</option>
+            <option value="games">Games</option>
+        </select><br>
 
-    <label>Data: </label>
-    <input type="text" name="data"><br>
+        <label>Data: </label>
+        <input type="text" name="data"><br>
 
-    <label>Horario de Inicio: </label>
-    <input type="text" name="horaInicio"><br>
+        <label>Horario de Inicio: </label>
+        <input type="text" name="horaInicio"><br>
 
-    <label>Horario de Fim: </label>
-    <input type="text" name="horaFim"><br>
+        <label>Horario de Fim: </label>
+        <input type="text" name="horaFim"><br>
 
-    <label>Rua: </label>
-    <input type="text" name="rua"><br>
+        <label>Rua: </label>
+        <input type="text" name="rua"><br>
 
-    <label>Estado: </label>
-    <input type="text" name="estado"><br>
+        <label>Estado: </label>
+        <input type="text" name="estado"><br>
 
-    <label>País: </label>
-    <input type="text" name="pais"><br>
+        <label>País: </label>
+        <input type="text" name="pais"><br>
 
-    <label>Bairro: </label>
-    <input type="text" name="bairro"><br>
+        <label>Bairro: </label>
+        <input type="text" name="bairro"><br>
 
-    <label>Numero: </label>
-    <input type="text" name="numero"><br>
+        <label>Numero: </label>
+        <input type="text" name="numero"><br>
 
-    <button>Cadastrar</button>
-</form>
+        <label>link imagem: </label>
+        <input type="text" name="imagem"><br><br>
 
-</body>
+        <button>Cadastrar</button>
+    </form>
+
+    </body>
 </html>
